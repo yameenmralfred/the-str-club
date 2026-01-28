@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import logo from './assets/logo.png'
 
 const PILLARS = {
   connect: {
@@ -520,7 +521,7 @@ export default function STRClubRoundtable() {
         <div className="h-2 bg-gradient-to-r from-[#C91433] via-[#2C5F2D] to-[#D4AF37]" />
         <div className="max-w-4xl mx-auto px-6 py-8">
           <div className="text-center mb-6">
-          <img className='w-60 mx-auto' src='src/assets/logo.png'/>
+          <img  src={logo} alt="STR Club" className="w-60 mx-auto"/>
             {/* <h1 className="text-4xl font-serif font-bold mb-2">THE STR CLUB</h1> */}
             <p className="text-gray-400">Co-Creation Roundtable</p>
           </div>
