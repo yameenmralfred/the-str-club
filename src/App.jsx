@@ -520,7 +520,8 @@ export default function STRClubRoundtable() {
         <div className="h-2 bg-gradient-to-r from-[#C91433] via-[#2C5F2D] to-[#D4AF37]" />
         <div className="max-w-4xl mx-auto px-6 py-8">
           <div className="text-center mb-6">
-            <h1 className="text-4xl font-serif font-bold mb-2">THE STR CLUB</h1>
+          <img className='w-60 mx-auto' src='src/assets/logo.png'/>
+            {/* <h1 className="text-4xl font-serif font-bold mb-2">THE STR CLUB</h1> */}
             <p className="text-gray-400">Co-Creation Roundtable</p>
           </div>
 
@@ -590,31 +591,31 @@ export default function STRClubRoundtable() {
               
               return (
                 <button key={key} onClick={() => { setActivePillar(key); setCurrentView('pillar'); }}
-                  className="bg-gray-800 rounded-xl p-5 text-left hover:bg-gray-750 transition group"
-                  style={{ borderLeft: `4px solid ${pillar.color}` }}>
+                  className="bg-[gray]-800 rounded-xl p-5 text-left hover:bg-gray-750 transition group"
+                  style={{ borderLeft: `4px solid ${pillar.color}`, backgroundColor:`${pillar.color}`  }}>
                   <div className="flex justify-between items-start">
                     <div>
                       <div className="flex items-center gap-3 mb-1">
-                        <h2 className="text-xl font-bold" style={{ color: pillar.color }}>{pillar.name}</h2>
+                        <h2 className="text-xl font-bold ">{pillar.name}</h2>
                         <span className={`text-xs px-2 py-1 rounded-full font-medium ${currentPhase === 'submit' ? 'bg-blue-900 text-blue-300' : 'bg-green-900 text-green-300'}`}>
                           {currentPhase === 'submit' ? '📝 Submit' : '🗳️ Vote'}
                         </span>
                       </div>
-                      <p className="text-gray-500 text-sm">{pillar.subtitle}</p>
+                      <p className=" text-sm">{pillar.subtitle}</p>
                     </div>
                     <div className="text-right">
                       <div className="text-2xl font-bold">{ideaCount}</div>
-                      <div className="text-xs text-gray-500">ideas</div>
+                      <div className="text-xs ">ideas</div>
                     </div>
                   </div>
                   <div className="mt-3 flex items-center gap-4 text-sm">
                     {currentPhase === 'submit' ? (
-                      <span className="text-blue-400">{subsRemaining} submissions left</span>
+                      <span className="">{subsRemaining} submissions left</span>
                     ) : (
-                      <span className="text-green-400">{votesRemaining} votes left</span>
+                      <span className="">{votesRemaining} votes left</span>
                     )}
-                    <span className="text-gray-500">{totalVotes} total votes</span>
-                    <span className="text-gray-500 group-hover:text-white transition ml-auto">→</span>
+                    <span className="">{totalVotes} total votes</span>
+                    <span className=" group-hover:text-white transition ml-auto">→</span>
                   </div>
                 </button>
               );
@@ -623,10 +624,10 @@ export default function STRClubRoundtable() {
 
           {/* Navigation buttons */}
           <div className="flex gap-4">
-            <button onClick={() => setCurrentView('results')} className="flex-1 bg-gray-800 hover:bg-gray-700 px-4 py-3 rounded-lg transition">
+            <button onClick={() => setCurrentView('results')} className="flex-1 bg-cyan-700 hover:bg-cyan-800 px-4 py-3 rounded-lg transition">
               📊 Results
             </button>
-            <button onClick={() => setCurrentView('membership')} className="flex-1 bg-[#C91433] hover:bg-[#a01029] px-4 py-3 rounded-lg font-semibold transition">
+            <button onClick={() => setCurrentView('membership')} className="flex-1 bg-teal-700 hover:bg-teal-800 px-4 py-3 rounded-lg font-semibold transition">
               ⭐ Membership
             </button>
           </div>
