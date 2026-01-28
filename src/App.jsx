@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import logo from './assets/logo.png'
+import logo from './assets/logo.png';
 
 const PILLARS = {
   connect: {
